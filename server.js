@@ -6,7 +6,7 @@ const app = express()
 
 const corsOption = {
 
-    origin: "http://localhost:8081"
+    origin: true
 
 }
 app.use(cors(corsOption))
@@ -47,7 +47,7 @@ app.get("/",(req,res) =>{
 require('./routes/todolist.routes')(app)
 
 // set PORT , listen for requests
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 4000
 app.listen(PORT , ()=>{
 
     console.log(`Server is running on port ${PORT}`)
